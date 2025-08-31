@@ -1,0 +1,195 @@
+.home ul.reset,
+.home .stories,
+.home .stories-list,
+.home .cards,
+.home .grid {
+  
+  display: grid !important;
+  grid-template-columns: 1fr !important; /* single column only */
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+  column-count: 1 !important;
+  column-gap: 0 !important;
+}
+
+.home .card,
+.home .card.clickable {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0; 
+}
+
+@media (min-width: 900px) {
+  .home ul.reset,
+  .home .stories,
+  .home .stories-list,
+  .home .cards,
+  .home .grid {
+    max-width: 760px;      
+    margin-inline: auto;    
+  }
+}
+
+.home .card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.home {
+  overflow: visible; 
+}
+
+.home {
+  position: relative;
+  overflow: hidden; 
+  padding: 1.25rem;
+  border: none; 
+  background: transparent;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  inset: -5rem -20vw auto -20vw; 
+  height: 38rem;
+  z-index: 0;
+  background:
+    radial-gradient(40rem 20rem at 20% 10%, rgba(119, 92, 255, 0.10), transparent 60%),
+    radial-gradient(36rem 16rem at 85% -10%, rgba(255, 184, 0, 0.12), transparent 60%),
+    linear-gradient(180deg, rgba(130, 215, 255, 0.10), rgba(130, 215, 255, 0) 45%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.65), rgba(255,255,255,0.35));
+  filter: saturate(110%) contrast(102%);
+  pointer-events: none;
+  border-radius: 24px;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 120 120'>\
+    <g fill='none' stroke='%2399a1aa' stroke-width='0.6' opacity='0.5'>\
+      <path d='M0 60 Q30 20 60 60 T120 60'/>\
+      <path d='M0 90 Q35 55 60 90 T120 90'/>\
+      <path d='M0 30 Q25 5 60 30 T120 30'/>\
+      <circle cx='18' cy='18' r='2'/>\
+      <circle cx='102' cy='44' r='1.5'/>\
+      <circle cx='65' cy='105' r='1.8'/>\
+    </g>\
+  </svg>");
+  background-size: 240px 240px;
+  background-repeat: repeat;
+  border-radius: 24px;
+}
+
+/* Elevate the content above the decorative layers */
+.home > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Headings spacing for nicer rhythm on a decorated background */
+.home h2 {
+  margin-bottom: 0.35rem;
+}
+.home p.meta,
+.home > p {
+  margin-top: 0.25rem;
+}
+
+/* Links row: let it breathe on big screens, stack on small */
+.home .row:first-of-type {
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+@media (min-width: 900px) {
+  .home .row:first-of-type {
+    gap: .75rem;
+  }
+}
+
+/* Recent stories list—keep your existing structure but add subtle styling */
+.home ul.reset {
+  margin-top: .75rem !important;
+}
+
+/* Story Card (clickable) refinements */
+.home .card.clickable {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow:
+    0 10px 18px rgba(0,0,0,0.06),
+    0 2px 6px rgba(0,0,0,0.04);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.home .card.clickable:hover,
+.home .card.clickable:focus-within {
+  transform: translateY(-2px);
+  box-shadow:
+    0 16px 28px rgba(0,0,0,0.08),
+    0 4px 10px rgba(0,0,0,0.06);
+  border-color: rgba(0,0,0,0.1);
+}
+
+/* Story image: add soft mask and keep aspect tidy */
+.home .card.clickable img {
+  display: block;
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 14px;
+  -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent 100%);
+          mask-image: linear-gradient(180deg, #000 80%, transparent 100%);
+}
+
+/* Social buttons row inside the card */
+.home .card.clickable .row {
+  align-items: center;
+}
+
+/* Mobile tuning */
+@media (max-width: 680px) {
+  .home {
+    padding: .75rem;
+  }
+  .home::before {
+    height: 28rem;
+    inset: -3rem -15vw auto -15vw;
+    border-radius: 20px;
+  }
+  .home .card.clickable img {
+    max-height: 200px;
+    border-radius: 12px;
+  }
+}
+
+/* Light/Dark awareness (if you support theme toggling) */
+@media (prefers-color-scheme: dark) {
+  .home .card.clickable {
+    background: rgba(22,22,24,0.7);
+    border-color: rgba(255,255,255,0.06);
+    box-shadow:
+      0 10px 18px rgba(0,0,0,0.5),
+      0 2px 6px rgba(0,0,0,0.4);
+  }
+  .home::before {
+    background:
+      radial-gradient(40rem 20rem at 20% 10%, rgba(134, 99, 255, 0.14), transparent 60%),
+      radial-gradient(36rem 16rem at 85% -10%, rgba(255, 195, 26, 0.16), transparent 60%),
+      linear-gradient(180deg, rgba(120, 210, 255, 0.10), rgba(120, 210, 255, 0) 45%),
+      linear-gradient(180deg, rgba(20, 20, 24, 0.65), rgba(20,20,24,0.35));
+  }
+  .home::after {
+    opacity: 0.08;
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "stories": [
+    {
+      "id": "amara_0",
+      "title": "Sunrise at Olumo Rock",
+      "body": "Climbed before dawn, watched the city wake up.",
+      "images": ["/images/olumo.jpg"],
+      "template": null,
+      "mood": "Grateful",
+      "location": "Abeokuta, Nigeria",
+      "visibility": "public",
+      "allowComments": true,
+      "allowLikes": true,
+      "isAnonymous": false,
+      "createdAt": "2025-07-19T02:41:34.885722",
+      "updatedAt": "2025-08-09T02:41:34.885734",
+      "tags": [
+        "memory",
+        "highlight"
+      ],
+      "likes": 7,
+      "liked": false,
+      "comments": [],
+      "author": "Amara Onyekachi"
+    },
+    {
+      "id": "james_0",
+      "title": "Weekend in Barcelona",
+      "body": "Tapas, cycling, beach.",
+      "images": ["/images/barcelona.jpg"],
+      "template": null,
+      "mood": "Relaxed",
+      "location": "Barcelona, Spain",
+      "visibility": "public",
+      "allowComments": true,
+      "allowLikes": true,
+      "isAnonymous": false,
+      "createdAt": "2025-06-01T02:41:34.885740",
+      "updatedAt": "2025-08-13T02:41:34.885742",
+      "tags": [
+        "tip",
+        "food"
+      ],
+      "likes": 19,
+      "liked": false,
+      "comments": [],
+      "author": "James W."
+    },
+    {
+      "id": "fatima_0",
+      "title": "Markets of Marrakech",
+      "body": "Spices and fabrics everywhere.",
+      "images": ["/images/marrakech.jpg"],
+      "template": null,
+      "mood": "Inspired",
+      "location": "Marrakech, Morocco",
+      "visibility": "public",
+      "allowComments": true,
+      "allowLikes": true,
+      "isAnonymous": false,
+      "createdAt": "2025-05-08T02:41:34.885748",
+      "updatedAt": "2025-08-08T02:41:34.885754",
+      "tags": [
+        "photo",
+        "culture"
+      ],
+      "likes": 14,
+      "liked": false,
+      "comments": [],
+      "author": "Fatima A."
+    },
+    {
+      "id": "lucas_0",
+      "title": "Missed my train in Madrid \ud83d\ude02",
+      "body": "Ran for 5 minutes, still missed it.",
+      "images": ["/images/madrid.jpg"],
+      "template": null,
+      "mood": "Chaotic",
+      "location": "Madrid, Spain",
+      "visibility": "public",
+      "allowComments": true,
+      "allowLikes": true,
+      "isAnonymous": false,
+      "createdAt": "2025-07-15T02:41:34.885759",
+      "updatedAt": "2025-08-14T02:41:34.885761",
+      "tags": [
+        "highlight",
+        "humor"
+      ],
+      "likes": 11,
+      "liked": false,
+      "comments": [],
+      "author": "Lucas Mendes"
+    },
+    {
+      "id": "sakura_0",
+      "title": "Cherry blossoms with my grandmother",
+      "body": "Petals floating as she told me stories.",
+      "images": ["/images/cherry.jpg"],
+      "template": null,
+      "mood": "Nostalgic",
+      "location": "Kyoto, Japan",
+      "visibility": "public",
+      "allowComments": true,
+      "allowLikes": true,
+      "isAnonymous": false,
+      "createdAt": "2025-05-15T02:41:34.885768",
+      "updatedAt": "2025-08-07T02:41:34.885771",
+      "tags": [
+        "memory",
+        "family"
+      ],
+      "likes": 2,
+      "liked": false,
+      "comments": [],
+      "author": "Sakura K."
+    },
+    {
+      "id": "omar_0",
+      "title": "What I learned on my first solo trip",
+      "body": "Carry less, plan less, talk more.",
+      "images": ["/images/trip.jpg"],
+      "template": null,
+      "mood": "Reflective",
+      "location": "Cairo, Egypt",
+      "visibility": "public",
+      "allowComments": true,
+      "allowLikes": true,
+      "isAnonymous": false,
+      "createdAt": "2025-07-28T02:41:34.885776",
+      "updatedAt": "2025-08-09T02:41:34.885778",
+      "tags": [
+        "lesson",
+        "solo"
+      ],
+      "likes": 6,
+      "liked": false,
+      "comments": [],
+      "author": "Omar H."
+    }
+  ],
+  "prefs": {},
+  "bookmarks": [
+    "james_0",
+    "amara_0",
+    "amara_0",
+    "fatima_0",
+    "james_0"
+  ],
+  "exportedAt": "2025-08-16T02:41:34.885943"
+}

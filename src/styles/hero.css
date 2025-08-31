@@ -1,0 +1,158 @@
+.hero.hero--with-bg {
+  position: relative;
+  isolation: isolate;
+  min-height: 70vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background: url("/images/barcelona.jpg") center/cover no-repeat; 
+  color: #fff; 
+}
+
+.hero.hero--with-bg .hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); 
+  z-index: 0;
+}
+
+.hero.hero--with-bg .hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero.hero--with-bg .hero__title {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hero.hero--with-bg .hero__subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: 1.5rem;
+  color: #e5e7eb;
+}
+
+.hero.hero--with-bg .btn.primary {
+  background: #6a5cff;
+  color: #fff;
+  border: none;
+}
+
+.hero.hero--with-bg .btn.ghost {
+  border: 1px solid rgba(255,255,255,0.7);
+  color: #fff;
+  background: transparent;
+}
+
+
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(60vh, 70vh, 78vh);
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute; inset: -2px;
+  background:
+    radial-gradient(1200px 600px at 20% -10%, #8b5bff33, transparent 50%),
+    radial-gradient(1000px 700px at 120% 20%, #5b8cff33, transparent 50%),
+    linear-gradient(180deg, #fafafb 0%, #ffffff 100%);
+  filter: saturate(1.05);
+  z-index: -1;
+}
+
+body.dark .hero__bg {
+  background:
+    radial-gradient(1200px 600px at 20% -10%, #8b5bff33, transparent 50%),
+    radial-gradient(1000px 700px at 120% 20%, #5b8cff33, transparent 50%),
+    linear-gradient(180deg, #0b0c10 0%, #0f1115 100%);
+}
+
+.hero__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 2vw, 2rem) 1rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(1rem, 4vw, 3rem);
+}
+
+.hero__content { padding-block: clamp(.5rem, 1.5vw, 1rem); }
+.hero__title {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: .2px;
+  margin: 0 0 .5rem;
+}
+.hero__accent { color: #6a5cff; }
+body.dark .hero__accent { color: #86a6ff; }
+
+.hero__subtitle {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  color: #4b5563;
+}
+body.dark .hero__subtitle { color: #b6bdc7; }
+
+.hero__cta { display: flex; gap: .75rem; flex-wrap: wrap; }
+.btn-lg { padding: .85rem 1.1rem; font-size: 1rem; border-radius: 14px; }
+.btn.ghost { background: transparent; border: 1px solid rgba(0,0,0,.12); }
+body.dark .btn.ghost { border-color: rgba(255,255,255,.14); }
+
+.hero__meta {
+  margin-top: .75rem;
+  font-size: .9rem;
+  color: #6b7280;
+}
+body.dark .hero__meta { color: #96a0ad; }
+
+.hero__preview {
+  display: grid; place-items: center;
+}
+.hero__card {
+  width: min(480px, 90%);
+  aspect-ratio: 16/10;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.10);
+  padding: .75rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: .6rem;
+}
+body.dark .hero__card { background: #0f1115; box-shadow: 0 18px 50px rgba(0,0,0,.45); }
+
+.hero__img {
+  border-radius: 14px;
+  height: 42%;
+  background:
+    linear-gradient(0deg, rgba(0,0,0,.08), rgba(0,0,0,.08)),
+    url("/images/barcelona.jpg") center/cover no-repeat;
+}
+body.dark .hero__img { filter: brightness(.9) contrast(1.05); }
+
+.hero__lines { display: grid; gap: .5rem; align-content: start; }
+.hero__lines .line {
+  display: block; height: 10px; border-radius: 8px;
+  background: linear-gradient(90deg, rgba(0,0,0,.08), rgba(0,0,0,.04));
+}
+.hero__lines .line.short { width: 60%; }
+body.dark .hero__lines .line {
+  background: linear-gradient(90deg, rgba(255,255,255,.12), rgba(255,255,255,.08));
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__preview { order: -1; }
+  .hero { min-height: 64vh; }
+}

@@ -1,0 +1,70 @@
+.timeline-page ul.reset,
+.timeline-page .stories,
+.timeline-page .stories-list,
+.timeline-page .cards,
+.timeline-page .grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;  
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+  column-count: 1 !important;             
+  column-gap: 0 !important;
+}
+
+/* Make each card full-width inside the single column */
+.timeline-page .card {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;                
+}
+
+.timeline-page ul.reset > li + li {
+  margin-top: 0.75rem;
+}
+
+
+@media (min-width: 900px) {
+  .timeline-page ul.reset,
+  .timeline-page .stories,
+  .timeline-page .stories-list,
+  .timeline-page .cards,
+  .timeline-page .grid {
+    max-width: 760px;                   
+    margin-inline: auto;                
+  }
+}
+
+.timeline-page .card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.timeline-page .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.timeline-page .row .input,
+.timeline-page .row .select,
+.timeline-page .row .btn {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .timeline-page .row {
+    gap: 0.75rem;
+  }
+}
+
+.timeline-page {
+  overflow: visible;
+}

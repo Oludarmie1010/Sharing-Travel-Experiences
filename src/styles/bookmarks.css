@@ -1,0 +1,113 @@
+.bookmarks {
+  padding: 1.5rem;
+}
+
+.bookmarks__title {
+  font-size: clamp(1.25rem, 1.2rem + 1.2vw, 1.8rem);
+  line-height: 1.2;
+  margin-bottom: .25rem;
+}
+
+.bookmarks__subtitle {
+  margin-bottom: .75rem;
+  color: var(--muted, #6b7280);
+}
+
+.bookmarks__filters {
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-top: .25rem;
+}
+
+.bookmarks__count {
+  margin-top: .5rem;
+  color: var(--muted, #6b7280);
+}
+
+.feed {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: .9rem;
+}
+
+.story-card {
+  display: flex;
+  flex-direction: column;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+.story-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  border-color: rgba(0,0,0,.12);
+}
+
+.story-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: .5rem 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.02));
+}
+
+.story-meta {
+  font-size: .85rem;
+  color: var(--muted, #6b7280);
+}
+
+.story-title {
+  margin: .25rem 0 .2rem;
+  font-weight: 600;
+}
+
+.story-preview {
+  color: var(--text, #111827);
+  opacity: .92;
+}
+
+.story-tags {
+  margin-top: .25rem;
+}
+
+.story-actions {
+  margin-top: .6rem;
+  gap: .5rem;
+  justify-content: space-between;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,.08);
+}
+.btn-ghost:hover {
+  background: rgba(0,0,0,.04);
+}
+
+@media (max-width: 420px) {
+  .feed { grid-template-columns: 1fr; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .bookmarks__subtitle,
+  .bookmarks__count,
+  .story-meta { color: #9ca3af; }
+
+  .story-card {
+    border-color: rgba(255,255,255,.08);
+    background: rgba(20,20,20,.7);
+  }
+  .story-card:hover {
+    box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    border-color: rgba(255,255,255,.14);
+  }
+  .btn-ghost {
+    border-color: rgba(255,255,255,.14);
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,.06);
+  }
+}
